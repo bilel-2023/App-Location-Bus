@@ -1,0 +1,47 @@
+from tkinter import *
+from tkinter import ttk
+
+fenetre = Tk ()
+fenetre. geometry('1000x500')
+fenetre. title ('Gestion des locations ')
+fenetre. resizable (height=True, width=True)
+
+label = Label(fenetre, text= "Locations", font=("Verdana", 10))
+label. place(x='5', y= '5')
+label = Label(fenetre, text= "Date locations :")
+label. place(x='57', y= '50')
+label = Label(fenetre, text= "Nombre de jours :")
+label. place(x='50', y= '80')
+label = Label(fenetre, text= "Type :")
+label. place(x='75', y= '110')
+label = Label(fenetre, text= "Montant :")
+label. place(x='65', y= '140')
+label = Label(fenetre, text= "E-mail :")
+label. place(x='70', y= '170')
+entree_Lo = Entry(fenetre)
+entree_Lo.place(x='450', y= '50')
+entree_Nj = Entry(fenetre)
+entree_Nj.place(x='450', y= '80')
+entree_T = Entry(fenetre)
+entree_T.place(x='450', y= '110')
+entree_M = Entry(fenetre)
+entree_M.place(x='450', y= '140')
+entree_E = Entry(fenetre)
+entree_E.place(x='450', y= '170')
+bouton = Button(fenetre, text="Ajouter" , font=("Verdana", 10))
+bouton.place(x='759', y= '50')
+bouton = Button(fenetre, text="Supprimer" , font=("Verdana", 10))
+bouton.place(x='750', y= '80')
+bouton = Button(fenetre, text="Annuler" , font=("Verdana", 10))
+bouton.place(x='757', y= '110')
+bouton = Button(fenetre, text="Imprimer" , font=("Verdana", 10))
+bouton.place(x='850', y= '400')
+
+
+tree = ttk.Treeview(fenetre , columns =(1,2,3) , heigh = 5 , show = 'headings' )
+tree.place(x = '150' , y = '250' , width = '650' , height = '175')
+tree.heading(1 , text = "Date")
+tree.heading(2 , text = "Type")
+tree.heading(3 , text = "Montant")
+
+
